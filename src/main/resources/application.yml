@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: heroes
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: u
+    password: p
+    url: "jdbc:h2:mem:heroes;DB_CLOSE_ON_EXIT=FALSE"
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    open-in-view:
+    hibernate:
+      ddl-auto: create-drop
